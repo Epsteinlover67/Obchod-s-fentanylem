@@ -1,89 +1,68 @@
-body{
-    background-color: #1E1E2F;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    color: #eaeaea;
+:root {
+    --bg-color: #1E1E2F;
+    --text-color: #EAEAEA;
+    --accent-color: #7C5CFF;
+    --nav-color: #2C2C3E;
 }
 
-/* Navigační panel */
+body {
+  background-color: var(--bg-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  color: var(--text-color);
+}
+
 .nav {
-    background-color: #2c2c3e;
-    text-align: center;
-    padding: 15px 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  background-color: var(--nav-color);
+  padding: 11px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
-/* Tlačítka v navigaci */
 .nav button {
-    background-color: transparent;
-    border: 2px solid;
-    color: #eaeaea;
-    padding: 10px 25px;
-    margin: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 16px;
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--text-color);
+  padding: 10px 25px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
 }
 
 .nav button:hover {
-    background-color: #7c5cff;
-    color: white;
+  background-color: var(--accent-color);
+  color: var(--text-color);
 }
 
-/* Obsah stránek */
-.page {
-    display: none;
-    text-align: center;
-    padding: 60px 1;
-    min-height: 70vh;
-    opacity: 0;
-    transition: opacity 0.4 ease-in-out;
+.nav #furrytheme {
+  border-color: #FF5C8D;
+  position: absolute;
+  right: 10px;
+  padding: 10px 20px;
 }
 
-/* Aktivní stránka se zobrazí */
-.page.active {
-  display: block;
-  opacity: 1;
+.nav #furrytheme:hover {
+  background-color: #FF5C8D;
+  color: white;
 }
-
-/* Barvy pro jednotlivé sekce */
-#home {
-  background-color: #1E1E2F;
-}
-
-/* Textové styly */
-h2 {
-  color: #EAEAEA;
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-p {
-  color: #B8B8C9;
-  font-size: 1.1em;
-}
-
-#fentanyl table {
-    margin: 0 auto;
-    border-collapse: collapse;
-}
-
-#fentanyl th,
-#fentanyl td {
-  text-align: center;
-  padding: 20px 40px;
-   border: 1px solid rgba(255,255,255,0.06);
-}
-
-#fentanyl th {
-  font-weight: 600;
-  font-size: 24px;
-}
-
 
 .page {
   display: none;
+  text-align: center;
+  padding: 60px 1;
+  min-height: 140vh;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
 }
@@ -92,3 +71,193 @@ p {
   display: block;
   opacity: 1;
 }
+
+h2 {
+  color: var(--text-color);
+  font-size: 2.5em;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  padding-top: 70px;
+  font-weight: bold;
+}
+
+.benhover {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 25px;
+  margin: 50px auto;
+  box-shadow: 0 0 15px rgba(124, 92, 255, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.benhover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  border-radius: 25px;
+}
+
+.benhover #benpicture {
+  opacity: 1;
+}
+
+.benhover #gayniggerspicture {
+  opacity: 0;
+}
+
+.benhover:hover {
+  box-shadow: 0 0 25px rgba(255, 92, 141, 0.6);
+  transform: scale(1.05);
+}
+
+.benhover:hover #benpicture {
+  opacity: 0;
+}
+
+.benhover:hover #gayniggerspicture {
+  opacity: 1;
+}
+
+#fentanyl table {
+  table-layout: fixed;
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 55%;
+  vertical-align: center;
+  background-color: #21222f;
+  color: white;
+}
+
+#fentanyl th, #fentanyl td {
+  padding: 15px 35px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.87);
+  width: 33%;
+  word-wrap: break-word;
+}
+
+#fentanyl th {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+#fentanyl td {
+  font-size: 15px;
+}
+
+.smolobrazky {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 8px;
+  border-radius: 5px;
+}
+
+.smolobrazky:hover {
+  transform: scale(10);
+  transition: transform 0.3s ease;
+}
+
+#galerie {  
+  justify-content: center;
+}
+
+.obrazkywrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.galerieobrazky {
+  position: relative;
+  width: 320px;
+  height: 360px;
+  background: linear-gradient(145deg, #2b2b3d, #1f1f40);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.galerieobrazky::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 2px;
+  background: linear-gradient(135deg, #6944ff, #ff86f5);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.galerieobrazky img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+  margin-top: 10px;
+}
+
+.galerieobrazky .popisek {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #DDD;
+  font-size: 16px;
+  text-align: center;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Hover efekty */
+.galerieobrazky:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+.galerieobrazky:hover::before {
+  opacity: 1;
+}
+
+.galerieobrazky:hover img {
+  transform: scale(1.05);
+}
+
+.galerieobrazky:hover .popisek {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.popisek span {
+  color: #AD7BFF;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+

@@ -8,30 +8,73 @@
   </head>
   <body>
     <div class="nav">
-      <button onclick="showPage('home')">Dih</button>
+      <div class="navbuttons">
+      <button onclick="showPage('home')">Home</button>
       <button onclick="showPage('fentanyl')">Nabídka fentanylu</button>
-      <button onclick="showPage('palestina')">Palestincká armáda</button>
+      <button onclick="showPage('galerie')">Galerie</button>
+      </div>
+      <button id="furrytheme">≽^•⩊•^≼</button>
     </div>
 
     <div id="home" class="page active">
       <h2>Toto je stránka pro goonery</h2>
+      <div class="benhover">
+      <img src="ben.jpg" id="benpicture">
+      <img src="gayniggers.gif" id="gayniggerspicture">
+      </div>
     </div>
 
     <div id="fentanyl" class="page">
       <h2>Tento fentanyl máme v nabídce</h2>
      <table>
       <tr><th>Název</th><th>Síla</th><th>Cena</th></tr>
-      <tr><td>Klasický Fentanyl</td><td>Meh</td><td>6 Chodidel</td></tr>
-      <tr><td>Fentanyl z Nigeru</td><td>Salam?</td><td>378 Šekelů</td></tr>
-      <tr><td>Jamajský Fentanyl</td><td>MI BOMBOCLAT</td><td>67 Dihů</td></tr>
+      <tr><td><img src="fentanyl.jpg" class="smolobrazky">Klasický Fent</td><td>Mid</td><td>14 Šekelů</td></tr>
+      <tr><td><img src="palestina.jpg" class="smolobrazky">Palestinský Fent</td><td>Hlad budete mít</td><td>3 Feet Pics</td></tr>
+      <tr><td><img src="bomboclat.gif" class="smolobrazky">Jamajský Fent</td><td>MI BOMBOCLAT</td><td>67 Rupees</td></tr>
      </table>
     </div>
 
-    <div id="palestina" class="page">
-      <h2>Look peoples Palestina bludi</h2>
-      <img src="pictures/Palestina.pdf">
+    <div id="galerie" class="page">
+      <h2>Galerie našich obrazů na prodej</h2>
+      
+      <div class="obrazkywrapper">
+       <div class="galerieobrazky">
+        <img src="palestinskaarmada.jpg">
+        <p class="popisek">
+          <span class="nadpisobrazek">Palestinská armáda</span><br>
+          Unikátní obraz zachycující sílu a odhodlání palestinských bojovníků v jejich boji za svobodu.
+        </p>
+       </div>
+       <div class="galerieobrazky">
+        <img src="goblinbarrel.webp">
+        <p class="popisek">
+          <span class="nadpisobrazek">Goblin Barrel</span><br>
+          Dynamický obraz vysmátých židů v sudu! Kdo by nechtěl mít takový kousek doma?
+        </p>
+       </div>
+       <div class="galerieobrazky">
+        <img src="goblincurse.webp">
+        <p class="popisek">
+          <span class="nadpisobrazek">Goblin Curse</span><br>
+          Tajemná židovská nadávka, která přináší tumor každému, kdo ji vysloví. Perfektní pro vaši sbírku!
+        </p>
+       </div>
+       <div class="galerieobrazky">
+        <img src="epstinknight.webp">
+        <p class="popisek">
+          <span class="nadpisobrazek">Epstein Knight</span><br>
+          Hrdina mezi židy, který molestuje děti s grácií a elegancí. Skvělý doplněk pro každého sběratele!
+        </p>
+       </div>
+       <div class="galerieobrazky">
+        <img src="megafutes.webp">
+        <p class="popisek">
+          <span class="nadpisobrazek">Mega Futeš</span><br>
+          Mega Futeš, také známý jako "Mega Rapist", rapne každé dítě co vidí. Ideální pro temné kouty vaší sbírky!
+         </p>
+       </div>
+      </div> 
     </div>
-    
 
     <script src="script.js"></script>
   </body>
